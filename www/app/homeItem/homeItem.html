@@ -1,0 +1,13 @@
+<ion-card *ngFor="#item of inputList; #i = index">
+  <ion-card-header>
+    (&nbsp;{{i}}&nbsp;)&nbsp;{{item.header}}
+  </ion-card-header>
+  <ion-card-content>
+    {{item.content}}
+  </ion-card-content>
+  <div padding>
+    <button class="button button-light button-full" (click)="openDetail(item)">
+      Show Detail
+    </button>
+  </div>
+</ion-card>
