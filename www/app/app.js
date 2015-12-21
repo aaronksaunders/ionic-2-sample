@@ -6,7 +6,7 @@ import {HomePage} from './home/home';
  */
 @App({
   template: `
-    <ion-nav [root]="root"></ion-nav>
+    <ion-nav id="nav" [root]="root" #content></ion-nav>
     <ion-overlay></ion-overlay>
   `,
 })

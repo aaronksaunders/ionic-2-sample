@@ -2,7 +2,7 @@ import {
   Component, View, NgFor
 }
 from 'angular2/angular2';
-import {NavController, NavParams} from 'ionic/ionic';
+import {Page, NavController, NavParams} from 'ionic/ionic';
 import {HomeItemDetail} from '../homeItemDetail/homeItemDetail';
 
 @Component({

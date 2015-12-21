@@ -1,4 +1,4 @@
-import {Page, NavController, NavParams} from 'ionic/ionic';
+import {Page, NavController, NavParams, Modal} from 'ionic/ionic';
 import {HomeItem} from '../homeItem/homeItem';
 
 @Page({
@@ -8,7 +8,11 @@ import {HomeItem} from '../homeItem/homeItem';
 
 export class HomePage {
 
-  constructor() {
+  constructor(modal: Modal) {
+
+    this.modal = modal;
+    this.myParam = '';
+
     this.list = [{
       header :"This is Header Text",
       content : "This is the content"
@@ -18,4 +22,30 @@ export class HomePage {
       content : "This angular2 formatting in a PITA"
     }];
   }
+
+  addItem(){
+    this.modal.open(ModalAddItemPage, { 'myParam': "Hell Yeah" });
+  }
+}
+
+@Page({
+    templateUrl: "app/home/modal-addItem.html"
+})
+export class ModalAddItemPage {
+    constructor(
+        nav: NavController,
+        modal: Modal,
+        params: NavParams
+    ) {
+        this.nav = nav;
+        this.modal = modal;
+        this.myParam = params.get('myParam');
+    }
+
+    closeModal() {
+      let modal = this.modal.get();
+      if (modal) {
+        modal.close();
+      }
+    }
 }

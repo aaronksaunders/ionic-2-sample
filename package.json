@@ -19,5 +19,9 @@
     "typescript": "^1.7.3"
   },
   "name": "ionic-2-sample",
-  "description": "ionic-2-sample: An Ionic project"
+  "description": "ionic-2-sample: An Ionic project",
+  "cordovaPlugins": [],
+  "cordovaPlatforms": [
+    "ios"
+  ]
 }

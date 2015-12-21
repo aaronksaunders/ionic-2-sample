@@ -1,0 +1,13 @@
+<ion-toolbar>
+  <ion-title>Modals</ion-title>
+  <ion-buttons end>
+    <button outline  (click)="closeModal()">
+      New Item
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding>
+  <div [class.hide]="!myParam">Parameters entered: {{myParam}}</div>
+  <button danger full (click)="closeModal()">Close Modal</button>
+</ion-content>
